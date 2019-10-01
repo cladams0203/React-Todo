@@ -8,6 +8,7 @@ class App extends React.Component {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
+        <h3>Who will win tonights game?</h3>
       </div>
     );
   }
