@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoForm from './components/TodoComponents/TodoForm';
+import TodoList from './components/TodoComponents/TodoList';
 class App extends React.Component {
   constructor() {
     super();
@@ -46,7 +47,9 @@ class App extends React.Component {
       <div>
         {console.log(this.state)}
         <h2>Welcome to your Todo App!</h2>
+        <TodoList list={this.state.list} handleChange={this.handleChange} />
         <TodoForm handleAdd={this.handleAdd} />
+        <button onClick={() => {this.handleRemove()}}>Cear Completed Tasks</button>
       </div>
     );
   }
